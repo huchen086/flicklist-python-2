@@ -11,5 +11,12 @@ Implement this template!
 For each movie in the list, display the username of whoever watched it and what rating they gave.
     e.g. Jesse watched The Big Green, and gave it a rating of ***** stars.
 -->
+<ul>
+    {% for movie in recently_watched_movies %}
+    <li>
+        <strong>{{ movie.owner.username }}</strong> watched <strong>{{ movie.title }}</strong> and gave it a rating of <strong>{{ movie.rating }}</strong> stars.
+    </li>
+    {% endfor %}
+</ul>
 
 {% endblock %}
